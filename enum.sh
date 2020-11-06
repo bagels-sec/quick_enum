@@ -87,7 +87,7 @@ printf "\n"
 printf "\n"
 echo "------------------------"
 printf "Running Vuln Scan for Alive Hosts..\n"
-echo `nmap -sV --script=/scripts/NSE/vulscan.nse --iL alive_hosts.txt --open -oN vuln_scan.txt`
+echo `nmap -sV --script=./scripts/NSE/vulscan.nse --iL alive_hosts.txt --open -oN vuln_scan.txt`
 printf "Saved to vuln_scan.txt \n"
 echo "------------------------"
 printf "\n"
