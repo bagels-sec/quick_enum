@@ -82,3 +82,16 @@ echo `nmap -sS -p 80,443,8080,8081,8802 -Pn -n --iL alive_hosts.txt --open -oN h
 printf "Saved to http_servers.txt \n"
 echo "------------------------"
 printf "\n"
+
+## Vuln Scan For Alive Hosts
+printf "\n"
+echo "------------------------"
+printf "Running Vuln Scan for Alive Hosts..\n"
+echo `nmap -sV --script=/scripts/NSE/vulscan.nse --iL alive_hosts.txt --open -oN vuln_scan.txt`
+printf "Saved to vuln_scan.txt \n"
+echo "------------------------"
+printf "\n"
+
+
+
+
